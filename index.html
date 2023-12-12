@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app">
+        <!-- Parte di intestazione -->
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+
+        <!-- Gestione task input -->
+        <div class="new-task">
+            <input type="text" placeholder="Nuova Task" v-model="newTask" @keyup.enter="addTask">
+            <button @click="addTask">Aggiungi</button>
+        </div>
+
+        <!-- Output tasks -->
+        <div class="task-container">
+            <ul>
+                <li class="task" v-for="(task, index) in todos" :key="index">
+                    {{ task }}
+                    <span @click="removeTask(index)">X</span>
+                </li>
+                <li v-if="todos.length === 0">Nessuna task disponibile.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="script.js"></script>
+</body>
+</html>
