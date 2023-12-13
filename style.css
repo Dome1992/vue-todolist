@@ -1,0 +1,49 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 250, 83, 0.37);
+    background-color: #e1e1e1;
+    border-radius: 5px;
+    min-height: 250px;;
+}
+
+input {
+    width: 400px;
+    padding: 10px;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 0 10px rgba(0, 250, 83, 0.521);
+    cursor: pointer;
+}
+
+#x{
+    padding:20px;
+    cursor: pointer;
+}
+
+img{
+    width: 250px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(7, 7, 48);
+}
+
+#done {
+    text-decoration: line-through;
+    color: green;
+}
+ul {
+    list-style-type: none;
+}

@@ -11,7 +11,7 @@
     <div id="app">
         <!-- Parte di intestazione -->
         <div class="logo">
-            <img src="img/logo.png" alt="Logo">
+            <img src="logo boolean.png" alt="Logo">
         </div>
 
         <!-- Gestione task input -->
@@ -23,12 +23,19 @@
         <!-- Output tasks -->
         <div class="task-container">
             <ul>
+                <!-- Itera sulle attività nell'array todos -->
                 <li class="task" v-for="(task, index) in todos" :key="index">
-                    {{ task.text }}
-                    <span @click="removeTask(index)">X</span>
+
+                     <!-- V-if e V-else per gestire done -->
+                    <span v-if="task.done" id="done">{{ task.text }}</span>
+                    <span v-else>{{ task.text }}</span>
+
+                    <span @click="removeTask(index)" id="x">X</span>
                 </li>
-                <li v-if="todos.length === 0">Nessuna task disponibile.</li>
             </ul>
+                <div>
+                    <span v-if="todos.length === 0">Nessuna task disponibile.</span>
+                </div>
         </div>
     </div>
 

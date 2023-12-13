@@ -16,6 +16,18 @@ createApp({
                 {
                     text: 'Fare il bucato',
                     done: false
+                },
+                {
+                    text: 'Fare i compiti',
+                    done: false
+                },
+                {
+                    text: 'Partita  18:30',
+                    done: true
+                },
+                {
+                    text: 'Fare la doccia',
+                    done: true
                 }
             ]
         };
@@ -23,7 +35,7 @@ createApp({
     methods: {
         addTask() {
             if (this.newTask !== "") {
-                this.todos.push(this.newTask);
+                this.todos.push({text: this.newTask});
                 this.newTask = ""; // Pulisce l'input dopo l'aggiunta della task
             }
         },
